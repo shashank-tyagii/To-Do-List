@@ -9,6 +9,7 @@ app.use('/', require('./routes/index'));
 //setup view engine
 app.set('view engine' , 'ejs');
 app.set('views' , './views');
+app.use (express.static('assets'));                // Middleware to include CSS,JS, Images etc
 
 // This code is for setting up and connecting to server
 app.listen(port, function(err){
