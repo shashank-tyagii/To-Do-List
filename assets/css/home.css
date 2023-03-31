@@ -10,10 +10,10 @@ body{
 .singleTask{
     border: 1px solid white;
     width: 50%;
-    height: 90px;
+    height: 50px;
     color: white;
     display: flex;
-    align-items: baseline;
+    align-items: baseline; 
     /* justify-content: space-evenly; */
     position: relative;
     left: 25%;
@@ -28,6 +28,7 @@ body{
 .catesec{
     border: 1px solid black;
     background-color: chartreuse;
+    align-items: end;
 }
 
 /* style for TODO heading */
@@ -51,11 +52,11 @@ body{
 
 .desc_Class input{
     height: 50px;
-    width: 100%;
+    width: 600px;
     margin: 15px;
     text-align: center;
     transition: transform 0.3s;
-    border-radius: 22px;
+    border-radius: 0px;
     outline: none;
 }
 /* implemented some hover in description section */
@@ -194,6 +195,7 @@ input.delechack{
 .name_and_dueDate{
     height: auto;
     width: 200px;
+    color: white;
 }
 .dueDate{
     width: fit-content;
