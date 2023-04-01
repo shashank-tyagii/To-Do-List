@@ -2,7 +2,8 @@
 const mongoose = require('mongoose');
 
 // connect to locally running instance of MongoDB.
-mongoose.connect('mongodb://127.0.0.1:27017/to_do_list_db')
+const conn = mongoose.connect('mongodb://127.0.0.1:27017/to_do_list_db')
+conn.catch(err => console.log(err));
 
 // After connection, to get access to database
 var db = mongoose.connection;

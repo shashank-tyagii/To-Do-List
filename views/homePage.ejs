@@ -37,12 +37,12 @@
         <div>
             <% for(let i of todoList) { let j=0; let newIds='descids'+j; %>
                 <div class="singleTask">
-                    <input type="checkbox" name="delechack" class="delechack" onclick="checkedOrNot()" uid = <%= i._id %> >
+                    <input type="checkbox" name="description_checkbox" class="description_checkbox" onclick="checkedOrNot()" uid = <%= i._id %> >
                     <div class="name_and_dueDate">
-                        <p> <%= i.description %></p>
+                        <!-- <p> <%= i.description %></p> -->
                         <!-- <p> <%= i.date %></p> -->
-                        <!-- <p id=<%= i._id %>  uid = <%= i._id %> class="dispdsc"><%= i.desc %></p>
-                        <p id=<%= i._id + i.dueDate %> class="dueDate"  ><%= i.dueDate %></p> -->
+                         <p id=<%= i._id %> uid = <%= i._id %> class="description_display"> <%= i.description %> </p>
+                        <!-- <p id=<%= i._id + i.dueDate %> class="dueDate"  ><%= i.dueDate %></p> -->
                     </div>
                     <div class="catesec">
                         <%= i.category %>

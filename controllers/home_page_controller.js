@@ -21,3 +21,15 @@ module.exports.home = function (req,res){             // Module.exports because 
         return res.redirect('/') ;
     })
 }
+
+module.exports.deleteTodo = function(req,res){
+    id = req.query.id; // getting the id from ui
+    newsp = id.split(','); 
+    for(let i=0;i<newsp.length;i++){ // looping over newsp  to delete all the checked value
+        ToDo.findByIdAndDelete(newsp[i]).then(function(){
+            //return res.redirect('/');
+        })
+    }
+    return res.redirect('/');
+   
+}
